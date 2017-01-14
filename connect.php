@@ -5,7 +5,7 @@ try {
     // sql statment
     $select =  $db->query('SELECT * FROM customer_tbl');
     $customer = $select->fetchAll();
-    $countrySQL =  $db->query('SELECT DISTINCT id,country FROM customer_tbl');
+    $countrySQL =  $db->query('SELECT DISTINCT id,country_name FROM country_tbl');
     $country = $countrySQL->fetchAll();
 } catch (Exception $e) {
     echo "Can not connect to database";

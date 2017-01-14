@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $('.datatable').dataTable();
     $('input').not('input[type=radio]').not('input[type=submit]').addClass('form-control');
+    $('select').addClass('form-control');
 });
 $('.edit').click(function(){
     // get data from edit btn
