@@ -17,6 +17,7 @@ include('connect.php');
                         <th>Email</th>
                         <th>Country</th>
                         <th>IP Address</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,6 +31,7 @@ include('connect.php');
                         <td><?php echo $c['last_name']; ?></td>
                         <td><?php echo $c['email']; ?></td>
                         <td><?php echo $c['country']; ?></td>
+                        <td><?php echo $c['ip_address']; ?></td>
                         <td>
                             <div class="dropdown">
                                 <button class="btn btn-default dropdown-toggle"
