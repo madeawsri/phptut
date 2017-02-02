@@ -31,7 +31,18 @@
 
                     <div class="form-group">
                         <label for="country">Country</label>
+                        <!--
                         <input type="text" id="country" name="country">
+                        -->
+                        <select id="country" name="country">
+                            <?php
+                            foreach ($country as $c) {
+                            ?>
+                            <option value="<?php echo $c['country_name']; ?>"><?php echo $c['country_name']; ?></option>
+                            <?php
+                            } // end foreach
+                            ?>
+                        </select>
                     </div>
 
                     <div class="form-group">

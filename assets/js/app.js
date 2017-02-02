@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $('.datatable').dataTable();
     $('input').not('input[type=radio]').not('input[type=submit]').addClass('form-control');
+    $('select').addClass('form-control');
 });
 $('.edit').click(function(){
     // get data from edit btn
@@ -10,6 +11,7 @@ $('.edit').click(function(){
     var email = $(this).attr('data-email');
     var country = $(this).attr('data-country');
     var ip = $(this).attr('data-ip');
+    console.log(country);
     // set value to modal
     $("#id").val(id);
     $("#firstname").val(firstname);
