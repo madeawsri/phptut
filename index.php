@@ -3,6 +3,17 @@ include('header.php');
 include('connect.php');
 ?>
 <?php
+$a = count($customer);
+//var_dump($customer[0]['email']);
+$i = 0;
+do {
+    echo $customer[$i]['email'];
+    echo "<br>";
+    $i++;
+} while ($i < $a);
+
+die();
+/*
 // find first alphabet in sub-array in loop multiple array
 $car = array(
     array("Volvo",22,18),
@@ -18,6 +29,7 @@ foreach ($car as $c) {
         break;
     }
 }
+*/
 ?>
 <div class="container">
     <div class="row">

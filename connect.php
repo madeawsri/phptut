@@ -3,7 +3,7 @@ try {
     // connect to database
     $db = new PDO('mysql:host=localhost; dbname=zendtut; charset=utf8','root','');
     // sql statment
-    $select =  $db->query('SELECT * FROM customer_tbl');
+    $select =  $db->query('SELECT * FROM customer_tbl LIMIT 10');
     $customer = $select->fetchAll();
     $countrySQL =  $db->query('SELECT DISTINCT id,country FROM customer_tbl');
     $country = $countrySQL->fetchAll();
