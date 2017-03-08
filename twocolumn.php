@@ -25,15 +25,6 @@
     </table>
 </div>
 
-
-
-
-
-
-
-
-
-
 <?php
 /*
     <table class="table table-hover" id="bootstrap-table">
