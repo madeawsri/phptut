@@ -67,6 +67,17 @@ include('connect.php');
     </div>
 </div>
 
+<hr>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <?php
+        // echo 'Email // '.$mail[0];
+        // var_dump($mail);
+        ?>
+    </div>
+    <div class="col-md-2"></div>
+</div>
 <?php
 include('footer.php');
 ?>
