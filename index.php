@@ -1,6 +1,19 @@
 <?php
-include('header.php');
-include('connect.php');
+/**
+* Parses and verifies the doc comments for file.
+*
+* PHP version 5.6
+*
+* @category  PHP
+*
+* @package   PHPTUT
+* @author    Teerapuch Kassakul <teerapuch@hotmail.com>
+* @copyright 2016 Teerapuch
+* @license   http://opensource.org/licenses/mit-license.php MIT License
+* @link      http://teerapuch.com
+*/
+require 'header.php';
+require 'connect.php';
 ?>
 <div class="container">
     <div class="row">
@@ -21,10 +34,10 @@ include('connect.php');
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    $i = 1;
-                    foreach ($customer as $c) {
-                    ?>
+<?php
+$i = 1;
+foreach ($customer as $c) {
+    ?>
                     <tr>
                         <td><?php echo $i; ?></td>
                         <td><?php echo $c['first_name']; ?></td>
@@ -43,8 +56,10 @@ include('connect.php');
                                     <li>
                                         <a class="edit"
                                         data-id="<?php echo $c['id']; ?>"
-                                        data-firstname="<?php echo $c['first_name']; ?>"
-                                        data-lastname="<?php echo $c['last_name']; ?>"
+                                        data-firstname="<?php
+                                        echo $c['first_name']; ?>"
+                                        data-lastname="<?php
+                                        echo $c['last_name']; ?>"
                                         data-email="<?php echo $c['email']; ?>"
                                         data-country="<?php echo $c['country']; ?>"
                                         data-ip="<?php echo $c['ip_address']; ?>">
@@ -56,10 +71,10 @@ include('connect.php');
                             </div><!-- /.dropdown -->
                         </td>
                     </tr>
-                    <?php
-                        $i++;
-                    } // end foreach
-                    ?>
+    <?php
+    ++$i;
+} // end foreach
+?>
                 </tbody>
             </table>
         </div>
@@ -79,5 +94,5 @@ include('connect.php');
     <div class="col-md-2"></div>
 </div>
 <?php
-include('footer.php');
+require 'footer.php';
 ?>
