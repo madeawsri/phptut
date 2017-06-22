@@ -2,6 +2,7 @@ $(document).ready(function(){
     $('.datatable').dataTable();
     $('input').not('input[type=radio]').not('input[type=submit]').addClass('form-control');
     $('select').addClass('form-control');
+    customer();
 });
 $('.edit').click(function(){
     // get data from edit btn
@@ -71,3 +72,21 @@ function countCSSRules() {
 };
 
 countCSSRules();
+
+var customer = funciton(){
+    var table = $("#cj").DataTable({
+        "ajax": {
+            "method": "POST",
+            "url": '<?php echo $cj; ?>'
+        },
+        "column" : [
+            {"data": ""},
+            {"data": "firstname"},
+            {"data": "lastname"},
+            {"data": "email"},
+            {"data": "country"},
+            {"data": "ip"},
+            {"data": ""}
+        ]
+    });
+}

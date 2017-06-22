@@ -19,6 +19,13 @@ try {
     $customer = $select->fetchAll();
     $countrySQL = $db->query('SELECT DISTINCT id,country_name FROM country_tbl');
     $country = $countrySQL->fetchAll();
+
+    $cus = $db->query('SELECT * FROM customer_tbl LIMIT 100');
+    $cust = $cus->fetchAll();
+    foreach ($cust as $key => $c) {
+        $custo["data"][] = $c;
+    }
+    $cj = json_encode($custo);
     // $email =  $db->query("SELECT email FROM customer_tbl WHERE id = $id ");
     // $mail = $email->fetchAll();
     /*
